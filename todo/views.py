@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from todo.models import Todo, TodoArticulo
+from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
@@ -15,3 +16,5 @@ def ver_detalle(request, id):
 	ver = get_object_or_404(Todo,id=id)
 	return render_to_response('todo/ver.html',
 								RequestContext(request.locals()))
+def index2(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
