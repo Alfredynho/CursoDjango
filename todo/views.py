@@ -4,7 +4,7 @@ from django.template import RequestContext
 from todo.models import Todo, TodoArticulo
 from django.http import HttpResponse
 # Create your views here.
-
+# esta es mi primera rama de nombre rama1
 def index(request):
 	todo = Todo.objects.all() # select * from Todo
 	return render_to_response('index.html',
